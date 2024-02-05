@@ -1,0 +1,187 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
+  
+  html {
+    background: linear-gradient(to right bottom, #52514d, #001243);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+  }
+  
+.display-title {
+    font-family: "Georgia", serif;
+    font-variant: small-caps;
+    padding: 15px;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+  }
+  
+  
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  align-content: center;
+  margin-left: 250px;
+}
+
+.book {
+  width: 250px;
+  height: 355px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgb(62, 71, 152);
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all .7s ease-in-out;
+  break-inside: avoid;
+}
+
+.box-inner {
+    /* display: none; */
+    width: 600px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    position: absolute;
+    top: 350px;
+    overflow: hidden;
+}
+
+.book:hover {
+  cursor: pointer;
+    transform: rotateY(-28deg) rotateZ(-2deg) scale(1.02);
+  box-shadow: 1px 3px 2px #353d85, 20px 8px 0 #525dc4;
+}
+
+.book-image {
+  position: relative;
+}
+
+.book-image img {
+  width: 250px;
+  height: 355px;
+  display: block;
+}
+
+
+.book-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  color: black;
+  background-color: rgb(62, 71, 152);
+  transition: all .3s ease-in-out;
+  transform: translateY(100%);
+}
+
+.book-details p {
+  margin: 0;
+  padding: 5px 0;
+  border-bottom: 1px solid #fff;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+  margin: 0;
+  padding: 5px 0;
+  position: relative;
+  color: white;
+}
+
+.book:hover .book-details {
+  transform: translateY(0%);
+}
+
+.book-details {
+  flex-basis: 60%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: black;
+}
+
+
+
+.book-details p::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  border: 2px solid black;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.button {
+    font-family: "Garamond", serif;;
+    padding: 15px 20px;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #040043;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  .button:hover {background-color: #2a2a80db}
+  
+  .button:active {
+    background-color: #101131;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  
+  .button + .button {
+    margin-left: 40px;
+    }
+    
+   .button-end {
+  font-family: "Garamond", serif;
+  padding: 15px 20px;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #040043;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  float: right;
+  margin-right: 500px;
+}
+
+.button-end:hover {
+  background-color: #2a2a80db;
+}
+
+.button-end:active {
+  background-color: #101131;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
